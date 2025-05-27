@@ -9,7 +9,7 @@ app = FastAPI()
 @app.get("/ateo-digest")
 def ateo_digest():
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": "Ты — новостной ассистент. Создавай краткий, актуальный дайджест."},
             {"role": "user", "content": "Сделай дайджест новостей из телеграм-канала ATEO."}
